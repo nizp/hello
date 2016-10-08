@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+<script type="text/git">
+	git
+		工具，版本控制
+	将开发的每一次的版本保存起来
+	
+	
+	svn与git的区别
+	
+	svn:集成式
+		缺点:
+			不能断链接,就不能进行版本控制.
+			一旦中央服务器挂了,那么整个公司的文件都将丢失
+			参与开发人员比较局限
+	
+	git:分布式
+	
+	github网站:
+		程序员基(交)友网站
+		
+	
+	1:注册github账号
+	
+	2:安装git
+	
+	3:git和github绑定
+	
+	在github上新建项目
+	
+	将github上的项目克隆到本地
+		git clone 项目地址
+	
+	进入项目:master主干提示
+	
+	查看状态:
+		git status
+		
+	工作区到暂存区
+		git add 文件名
+		
+		多文件操作:
+			git add .
+		
+	暂存区到版本区
+		git commit -m "注释"   (就添加一个版本号)
+		
+		
+		直接从本地到版本区:
+			git commit -a -m "注释"
+	
+	查看版本号:
+		git log
+		
+		q键 --- 返回
+		
+	1.工作区与暂存区的区别
+		git diff
+		
+	2.暂存区与版本区的区别
+		git diff --cached 
+		
+	3.工作区与版本区的区别
+		git diff master
+		
+	撤销操作:
+		暂存区撤销到工作区
+			git reset HEAD 文件名   (从绿色变成红色)
+			
+		工作区代码还原暂存区或版本区
+			
+			当暂存区中有内容的时候,撤销的代码为暂存区
+			
+			当暂存区中没有内容的时候,撤销的代码为版本区
+		
+			git checkout -- 文件名
+			
+		如果有2个以上文件，一个或几个提交到版本库了，
+		另一个忘记提交，可以先将没提交的文件拉到缓存区，
+		然后通过git commit -m “注释”--amend 撤销回来，
+		最后,一次性提交暂存区中的文件与最近一次提交的版本
+		合并形成新的版本号
+		git log查看是否提交成功
+		
+	
+	删除:
+		(1)
+		本地文件已经提交到暂存区,但是又在本地删除了,那么暂存区会一直保留被删除文件的状态,通过git rm 文件名 就可以彻底删除
+		
+	
+		(2)
+		一次性要把暂存区的文件与工作区的文件都删除,
+			git rm -f 文件名
+		
+		(3)
+			只删除暂存区不删除本地
+				git rm --cached 文件名
+		
+	
+	git status
+	git add
+	git commit -m ""
+	git log
+	git diff
+	git diff --cached
+	git diff master
+	git reset HEAD 文件名
+	git checkout -- 文件名
+	git rm 文件名
+	git rm -f 文件名
+	git rm --cached 文件名
+	git commit -m "" --amend
+	git clone
+	git config --glabal user.name
+	git config --glabal user.email
+	git config --list
+	clear
+	git add .
+	git commit -a -m ""
+	
+	还原:
+		还原某个指定的文件:
+			git checkout 版本号 文件名
+			
+		还原整个版本:
+			git reset --hard 版本号
+			
+		从倒数第二个开始还原
+			git reset --hard HEAD^
+			运行第一次是还原倒数第二个版本,运行第二次还原倒数第三个版本.....
+			
+		通过版本号排列序号来还原
+			git reset --hard HEAD~2
+			回滚倒数第三个历史记录 （跳过了2个）
+		
+		要查看操作的历史记录
+			git reflog
+		
+		
+		
+		
+	
+	
+		
+		
+		
+	
+	
+	
+	
+		
+	
+	
+	
+		
+	
+	
+	
+	
+
+</script>
+</body>
+</html>
