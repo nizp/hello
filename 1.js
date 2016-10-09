@@ -9,17 +9,16 @@ window.onload = function(){
 		for(var i=0;i<this.btn.length;i++){
 			this.btn[i].index = i;
 			this.btn[i].onclick = function(){
-				that.fn(this);
+				that.fn(this.index);
 			}
 		}
 	}
-	Tab.prototype.fn = function(that){
+	Tab.prototype.fn = function(index){
 		for(var i=0;i<this.btn.length;i++){
 			this.btn[i].className = '';
 			this.divs[i].className = '';
 		}
-		that.className = 'active';
-		this.divs[that.index].className = 'show';
-		
+		this.btn[index].className = 'active';
+		this.divs[index].className = 'show';
 	}
 }
