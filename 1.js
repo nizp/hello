@@ -20,6 +20,5 @@ window.onload = function(){
 		}
 		this.btn[index].className = 'active';
 		this.divs[index].className = 'show';
-		
 	}
 }
