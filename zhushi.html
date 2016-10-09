@@ -175,7 +175,81 @@
 		3. git merge origin/master (合并远程仓库与版本库的代码)
 		4.人为判断解决冲突
 		
-		5.新的版本控制 + push到远程
+		5.添加新的版本控制 + push到远程
+		
+	
+	直接将远程仓库的代码拉取到本地：
+		git pull(没有把握最好不要用，强烈建议用 git fetch)
+		
+	缺点：
+		会将本地的代码直接覆盖。
+		
+	
+	当没有权限的时候还想维护别人的代码：
+		1.找到这个项目
+		2.fork项目
+		3.git clone到本地
+		4.修改 + 上传
+		5.点击New pull request按钮
+		6.点击Create pull request按钮
+		7.填写修改的描述 + 点击Create pull request按钮
+		8.等待别人和合并
+		
+	当收到别人维护的代码请求的时候：
+		1.先查看修改（项目中的Files changed）
+		2.确定可以合并就点击Merge pull request按钮
+		3.修改合并代码后的标题
+		4.Confirm  merge（合并）
+		5.跟别人说句话，表示感谢
+		
+	分支：
+		查看分支：
+			git branch
+		
+		新建分支：
+			git branch 新的分支名
+			
+		切换分支：
+			git checkout 分支名
+
+		删除分支:
+			git branch -D 分支名  （没有合并的分支，强行删除）
+			git branch -d 分支名（删除已经合并的分支）
+		
+		快速创建切换分支：
+			git checkout -b 分支的名字
+			
+		查看已经合并的分支：
+			git branch --merged
+			
+		查看还没有合并的分支：
+			git branch --no-merged
+			
+		设置记住密码（默认15分钟）：
+			git config --global credential.helper cache
+		如果想自己设置时间，可以这样做：
+		
+			git config credential.helper 'cache --timeout=3600'
+		这样就设置一个小时之后失效
+		
+		长期存储密码：
+		
+			git config --global credential.helper store
+		增加远程地址的时候带上密码也是可以的。(推荐)
+		
+			http://yourname:password@git.oschina.net/name/project.git
+		补充：使用客户端也可以存储密码的。
+			
+		
+			
+		
+          
+    
+			
+		
+		
+    
+      
 		
 		
 		
