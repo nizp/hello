@@ -13,4 +13,7 @@ window.onload = function(){
 			}
 		}
 	}
+	Tab.prototype.fn = function(){
+		
+	}
 }
