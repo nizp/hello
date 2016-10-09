@@ -1,6 +1,6 @@
 window.onload = function(){
 	function Tab(){
-		this.divs = document.getElementsByTagName('div');
+		this.div = document.getElementsByTagName('div');
 		this.btn = document.getElementsByTagName('input');
 	}
 	
@@ -16,9 +16,9 @@ window.onload = function(){
 	Tab.prototype.fn = function(index){
 		for(var i=0;i<this.btn.length;i++){
 			this.btn[i].className = '';
-			this.divs[i].className = '';
+			this.div[i].className = '';
 		}
 		this.btn[index].className = 'active';
-		this.divs[index].className = 'show';
+		this.div[index].className = 'show';
 	}
 }
